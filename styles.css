@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Alfa Slab One', sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(45, 44, 61);
+}
+
+.game {
+  width: 480px;
+  height: 640px;
+  border: 1px solid rgb(0, 0, 0);
+  overflow: hidden;
+}
+
+.sky {
+  width: 100%;
+  height: 80%;
+  background-image: url("Images/sky1.png");
+  background-size: cover;
+}
+
+.ground {
+  background: chocolate;
+  width: 100%;
+  height: 20%;
+  border-top: 3px solid black
+}
+
+.bird {
+  width: 50px;
+  height: 37px;
+  display: inline-block;
+  position: relative;
+  left: 150px;
+  top: 200px;
+}
+
+.bird img{
+  width: 100%;
+}
+
+.score {
+  position: relative;
+  font-size: 50px;
+  text-align: center;
+  top: 20px;
+  z-index: 2;
+}
+
+.obstacleContainer {
+  border: 1px solid black;
+  position: relative;
+  left: 100%;
+  display: flex;
+  height: 300px;
+  align-items: flex-end;
+  bottom: 300px;
+  width: fit-content;
+}
+
+.obstacleContainer2 {
+  border: 1px solid black;
+  position: relative;
+  left: 100%;
+  display: flex;
+  height: 300px;
+  align-items: flex-start;
+  bottom: 940px;
+  width: fit-content;
+}
+
+.obstacle {
+  width: 70px;
+  background: mediumseagreen;
+  border-left: 3px solid black;
+  border-right: 3px solid black;
+  border-top: 3px solid black;
+  height: 100px;
+  position: relative;
+}
+
+.obstacle2 {
+  border-bottom: 3px solid black;
+}
+
+.gameOver {
+  display: none;
+  position: relative;
+  top: -194%;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.gameOverBox {
+  width: 50%;
+  height: 25%;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 10px;
+}
