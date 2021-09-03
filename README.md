@@ -5,4 +5,4 @@ A Flappy Bird clone I made using vanilla JavaScript. Start the game by either cl
 The images for the bird come from https://bevouliin.com/
 The sky background image comes from https://opengameart.org/content/sky-backdrop
 
-<img src="https://github.com/MichaelMcCann1/Flappy-Bird/blob/main/FlappyBirdScreenshot.png" height="300px">
+<img src="https://github.com/MichaelMcCann1/Flappy-Bird/blob/main/FlappyBird.png" height="300px">
