@@ -30,7 +30,7 @@ window.onload = () => {
   })
   window.addEventListener('keyup', (e) => {
     if (!game && e.key === ' ') game = new Game(gravity, birdSpeed, initialBirdPosition, scoreElementSelector)
-    game.jump()
+    if (e.key === ' ') game.jump()
   })
 
   class Game {
