@@ -7,6 +7,24 @@
   font-family: 'Alfa Slab One', sans-serif;
 }
 
+.githubLink {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  z-index: 100;
+}
+
+.githubLink > img {
+  opacity: 0.3;
+  width: 30px;
+  height: 30px;
+  transition: all .5s ease;
+}
+
+.githubLink:hover > img {
+  opacity: 1;
+}
+
 body {
   width: 100vw;
   height: 100vh;
