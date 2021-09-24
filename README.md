@@ -1,5 +1,7 @@
 # Flappy-Bird
 
+**Live Link to Project:** https://mm-flappybird.web.app/
+
 A Flappy Bird clone I made using vanilla JavaScript. Start the game by either clicking the mouse or by pressing the spacebar. On mobile you start the game by tapping anywhere on the screen. Avoid hitting the ground or the pipes by jumping. To jump you can either click the mouse, press the spacebar, or tap the screen if you are on mobile. You earn one point for every set of pipes you pass through.
 
 The images for the bird come from https://bevouliin.com/
