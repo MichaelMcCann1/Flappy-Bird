@@ -27,7 +27,7 @@
 
 body {
   width: 100vw;
-  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   display: grid;
   place-content: center;
   overflow: hidden;
@@ -58,17 +58,20 @@ body {
 }
 
 .bird {
-  width: 50px;
-  height: 37px;
+  width: 45px;
+  height: 30px;
   display: inline-block;
   position: absolute;
   left: 32%;
   top: 40%;
   user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .bird img{
-  width: 100%;
+  width: 110%;
   height: auto;
   user-select: none;
 }
@@ -150,11 +153,18 @@ body {
   text-align: center;
 }
 
-
 @media screen and (max-width: 500px) {
   .game {
     width: 100vw;
-    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
     border: none;
+  }
+
+  .sky {
+    height: 90%;
+  }
+  
+  .ground {
+    height: 10%;
   }
 }

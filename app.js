@@ -1,3 +1,6 @@
+let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+
 // DOM Selectors
 const skySelector = document.querySelector('.sky')
 const birdSelector = document.querySelector('.bird');
@@ -16,29 +19,29 @@ const wingUpPath = "Images/Yellow/wing-up.png";
 const wingDownPath = "Images/Yellow/wing-down.png";
 
 const gravity = .3 ; //constant value of how quickly gravity pulls you down
-const birdSpeed = 0; //actual speed of bird. Value constantly changes as you fall
 let initialBirdPosition;
-let game;
+
 
 window.onload = () => {
   obstacleContainer.style.bottom = parseFloat(getComputedStyle(groundSelector).height.slice(0,-2)) + 'px'
   initialBirdPosition = parseFloat(getComputedStyle(birdSelector).top)
 
-  window.addEventListener('click', () => {
-    if (!game) game = new Game(gravity, birdSpeed, initialBirdPosition, scoreElementSelector)
+  let game;
+  body.addEventListener('click', () => {
+    if (!game) game = new Game(gravity, initialBirdPosition)
     game.jump()
   })
   window.addEventListener('keyup', (e) => {
-    if (!game && e.key === ' ') game = new Game(gravity, birdSpeed, initialBirdPosition, scoreElementSelector)
+    if (!game && e.key === ' ') game = new Game(gravity, initialBirdPosition)
     if (e.key === ' ') game.jump()
   })
 
   class Game {
-    constructor(gravity, birdSpeed, birdTop, scoreElement) {
+    constructor(gravity, birdTop) {
       this.gravity = gravity;
-      this.birdSpeed = birdSpeed; 
       this.birdTop = birdTop;
-      this.scoreElement = scoreElement;
+      this.scoreElement = scoreElementSelector;
+      this.birdSpeed = 0;
       this.hiscore = 0;
       this.pull = setInterval(() => {game.pullBird()}, 20);
       this.generateObstacles = setInterval(() => {game.generateObstacle()}, 2000);
